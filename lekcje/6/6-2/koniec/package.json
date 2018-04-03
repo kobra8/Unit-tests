@@ -1,0 +1,21 @@
+{
+  "name": "code-coverage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nyc ./node_modules/.bin/mocha tests/*-test.js --reporter spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0"
+  },
+  "nyc": {
+    "include": [
+      "app/app.js"
+    ]
+  }
+}
