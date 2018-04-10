@@ -1,7 +1,7 @@
 function App(id,name) {
 
-	this.name = name;
 	this.id = id;
+	this.name = name;
 }
 
 var userList = [];

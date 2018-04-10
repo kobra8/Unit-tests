@@ -2,7 +2,7 @@ function App() {
 }
 
 App.prototype.getName = function(){
-	
+	//Metoda getName nie została jeszcze zaimplementowana
 };
 
 App.prototype.hasValidName = function(appName){

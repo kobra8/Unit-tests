@@ -16,4 +16,18 @@ describe('Create App', function(){
         expect(app.saveApp).not.toHaveBeenCalled();
     });
 
+    it('should call saveApp() with app Name ', function(){
+        var app = new App();
+        spyOn(app, 'saveApp');
+        app.createApp('To Do List');
+        expect(app.saveApp).toHaveBeenCalledWith('To Do List'); // Sprawdzanie czy metoda została wywołana z określonym argumentem
+    });
+
+    it('should call saveApp()twice', function(){
+        var app = new App();
+        spyOn(app, 'saveApp');
+        app.createApp('To Do List');
+        expect(app.saveApp.calls.length).toBe(2); // Sprawdzanie ile razy metoda została wywołana
+    });
+
 });
